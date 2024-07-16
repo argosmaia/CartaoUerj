@@ -14,3 +14,8 @@ buildNumber.properties
 # Eclipse Core
 .project
 # JDT-specific (Eclipse Java Development Tools)
+
+compose.yml
+HELP.md
+mvnw
+mvnw.cmd
