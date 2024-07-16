@@ -4,6 +4,7 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+<<<<<<< HEAD
 ### STS ###
 .apt_generated
 .classpath
@@ -31,3 +32,14 @@ build/
 
 ### VS Code ###
 .vscode/
+=======
+# Eclipse m2e generated files
+# Eclipse Core
+.project
+# JDT-specific (Eclipse Java Development Tools)
+
+compose.yml
+HELP.md
+mvnw
+mvnw.cmd
+>>>>>>> c5bee6bf665c4a1a8e1013257fd31b4640c7473d
