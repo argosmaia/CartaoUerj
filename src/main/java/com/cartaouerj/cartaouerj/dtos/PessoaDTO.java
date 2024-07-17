@@ -10,7 +10,6 @@ import java.util.Date;
  */
 public record PessoaDTO
 	(
-		Long id,
 		String nome,
 		int idade,
 		Date aniversario,
