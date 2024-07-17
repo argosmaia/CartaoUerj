@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 import com.cartaouerj.cartaouerj.entity.Conta;
 import com.cartaouerj.cartaouerj.entity.Transferencia;
 import com.cartaouerj.cartaouerj.repositories.TransferenciaRepository;
+import com.cartaouerj.cartaouerj.services.ContaCartaoService;
+import com.cartaouerj.cartaouerj.entity.ContaCartao;
 
 @Service
 public class TransferenciaService {
@@ -17,10 +19,12 @@ public class TransferenciaService {
     
     @Autowired
     private ContaService contaService;
+    @Autowired
+    private ContaCartaoService contaCartaoService;
 
     public Transferencia createTransferencia(Long origemId, Long destinoId, BigDecimal valor) throws Exception {
         Conta contaOrigem = contaService.obterContaPorId(origemId);
-        Conta contaDestino = contaService.obterContaPorId(destinoId);
+        ContaCartao contaDestino = contaCartaoService.obterContaCartaoPorMatriculaAluno(destinoId);
 
         if (contaOrigem.getSaldo().compareTo(valor) < 0) {
             throw new Exception("Saldo insuficiente");

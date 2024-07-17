@@ -16,4 +16,11 @@ public record ContaDTO(
 		String cartaoDebito,
 		String cartaoCredito,
 		List<String> chavesPix
-		) { }
+		) {
+
+    public BigDecimal getSaldo() {
+        return saldo;
+    }
+
+	
+}

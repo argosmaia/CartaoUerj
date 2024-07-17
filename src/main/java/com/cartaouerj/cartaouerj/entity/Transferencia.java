@@ -35,8 +35,7 @@ public class Transferencia extends Conta {
     private Conta origem;
     @ManyToOne
     @JoinColumn(name="destino_id")
-    private Conta destino;
-
+    private ContaCartao destino;
 
     private BigDecimal valor;
     private String status;
