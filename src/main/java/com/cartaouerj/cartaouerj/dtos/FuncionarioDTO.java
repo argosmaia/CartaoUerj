@@ -12,9 +12,12 @@ import com.cartaouerj.cartaouerj.entity.Pessoa;
  */
 public record FuncionarioDTO
 	(
-		PessoaDTO pessoaDTO,
 		String codigo,
 		String departamento
 	) {
+
+    public String getCodigo() {
+        return codigo;
+    }
 
 }

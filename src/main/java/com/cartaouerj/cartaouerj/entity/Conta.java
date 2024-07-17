@@ -50,6 +50,7 @@ public class Conta implements CartaoCredito, CartaoDebito, ChavePix {
 	
 	@Column(nullable = true)
 	private String NumeroCartaoCredito;
+
 	
     @Column(name = "chave_pix")
     private List<String> chavesPix = new ArrayList<>();

@@ -10,6 +10,11 @@ public record AlunoDTO
 	(
 		PessoaDTO pessoaDTO,
 		String matricula,
-		String curso
-	) {
+		String curso) {
+
+    public String getMatricula() {
+        return matricula;
+    }
+
+	
 }

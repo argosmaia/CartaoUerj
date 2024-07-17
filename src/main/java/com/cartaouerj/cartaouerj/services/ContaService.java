@@ -59,8 +59,9 @@ public class ContaService {
 
     public void creditar(String conta, BigDecimal valor) throws Exception {
         Conta contaCredito = this.obterConta(conta);
+        // se o valor for menor que o limite gere uma exceção se não credite o valor
         if (valor.compareTo(contaCredito.getLimite()) > 0) {
-            throw new Exception("Limite de crédito excedido");
+            throw new Exception("Valor maior que o limite");
         } else {
             contaCredito.creditar(valor);
             this.salvar(contaCredito);
@@ -73,7 +74,7 @@ public class ContaService {
             throw new Exception("Saldo insuficiente");
         }
         if (valor.compareTo(BigDecimal.ZERO) <= 0) {
-            throw new Exception("Valor não pode ser negativo");
+            throw new Exception("Valor não pode ser zero ou negativo");
         } else {
             contaOrigem.debitar(valor);
             this.salvar(contaOrigem);
